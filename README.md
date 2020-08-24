@@ -28,5 +28,5 @@ Please, cite both the associated manuscript:
 
 And this repository:
 
-https://zenodo.org/badge/DOI/10.5281/zenodo.3997606.svg
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3997606.svg)](https://doi.org/10.5281/zenodo.3997606)
 
