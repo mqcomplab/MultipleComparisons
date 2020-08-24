@@ -28,4 +28,5 @@ Please, cite both the associated manuscript:
 
 And this repository:
 
-DOI: (to be added after each release)
+https://zenodo.org/badge/DOI/10.5281/zenodo.3997606.svg
+
