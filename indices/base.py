@@ -216,24 +216,30 @@ class BaseComparisons(object):
                         dissimilarity = n**-(d[k] - n_fingerprints % 2)
             other values : similarity = dissimilarity = 1
         """
-        if w_factor == "power_n":
-            power = int(w_factor.split("_")[-1])
-
-            def f_s(d):
-                return power**-(self.n_fingerprints - d)
-
-            def f_d(d):
-                return power**-(d - self.n_fingerprints % 2)
-        elif w_factor == "fraction":
-            def f_s(d):
-                return d/self.n_fingerprints
-
-            def f_d(d):
-                return 1 - (d - self.n_fingerprints % 2)/self.n_fingerprints
+        if w_factor:
+            if "power" in w_factor:
+                power = int(w_factor.split("_")[-1])
+                def f_s(d):
+                    return power**-float(self.n_fingerprints - d)
+    
+                def f_d(d):
+                    return power**-float(d - self.n_fingerprints % 2)
+            elif w_factor == "fraction":
+                def f_s(d):
+                    return d/self.n_fingerprints
+    
+                def f_d(d):
+                    return 1 - (d - self.n_fingerprints % 2)/self.n_fingerprints
+            else:
+                def f_s(d):
+                    return 1
+    
+                def f_d(d):
+                    return 1
         else:
             def f_s(d):
                 return 1
-
+    
             def f_d(d):
                 return 1
         weights = (self.n_fingerprints + 1) * [0]
