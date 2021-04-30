@@ -17,9 +17,9 @@ SciPy >= 0.11.0;  http://www.scipy.org/
 Matplotlib >= 1.0;  http://matplotlib.org/
 
 # Usage
-The folder indices contains the classes used to process to calculate the n-ary indices.
-The folder post_processing contains auxiliary functionality that can be used to process the results (generating files with the results of the
-comparisons, sum of rankind differences, preparation of input files for ANOVA analysis).
+The folder "indices" contains the classes used to calculate and process the n-ary indices.
+The folder "post_processing" contains auxiliary functionality that can be used to process the results (generating files with the results of the
+comparisons, sum of ranking differences, preparation of input files for ANOVA analysis).
 
 # Reference
 Please, cite both the associated manuscript:
@@ -28,4 +28,5 @@ Please, cite both the associated manuscript:
 
 And this repository:
 
-DOI: (to be added after each release)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3997606.svg)](https://doi.org/10.5281/zenodo.3997606)
+
