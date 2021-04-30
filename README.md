@@ -2,7 +2,9 @@
 
 # About
 MultipleComparisons allows to calculate and process extended (e.g., n-ary) similarity indices.
-The basic theory is detailed in: "Extended similarity indices: the benefits of comparing more than two objects simultaneously. Part 1: Theory and characteristics", R. A. Miranda-Quintana, D. Bajusz, A. Rácz, K. Héberger; J. Cheminformatics (in preparation)
+The basic theory is detailed in: "Extended similarity indices: the benefits of comparing more than two objects simultaneously. Part 1: Theory and characteristics", R. A. Miranda-Quintana, D. Bajusz, A. Rácz, K. Héberger; J. Cheminformatics https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00505-3
+
+Some applications are presented in: "Extended similarity indices: the benefits of comparing more than two objects simultaneously. Part 2: speed, consistency, diversity selection", R. A. Miranda-Quintana, A. Rácz, D. Bajusz, K. Héberger; J. Cheminformatics https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00504-4
 
 # License
 MultipleComparisons is distributed under GPL License version 3 (GPLv3).
@@ -22,9 +24,12 @@ The folder "post_processing" contains auxiliary functionality that can be used t
 comparisons, sum of ranking differences, preparation of input files for ANOVA analysis).
 
 # Reference
-Please, cite both the associated manuscript:
+Please, cite both the associated manuscripts:
 
-"Extended similarity indices: the benefits of comparing more than two objects simultaneously. Part 1: Theory and characteristics", R. A. Miranda-Quintana, D. Bajusz, A. Rácz, K. Héberger; J. Cheminformatics (in preparation)
+"Extended similarity indices: the benefits of comparing more than two objects simultaneously. Part 1: Theory and characteristics", R. A. Miranda-Quintana, D. Bajusz, A. Rácz, K. Héberger; J. Cheminformatics 13 (32), 2021, https://doi.org/10.1186/s13321-021-00505-3
+
+"Extended similarity indices: the benefits of comparing more than two objects simultaneously. Part 2: speed, consistency, diversity selection", R. A. Miranda-Quintana, D. Bajusz, A. Rácz, K. Héberger; J. Cheminformatics 13 (33), 2021, https://doi.org/10.1186/s13321-021-00504-4
+
 
 And this repository:
 
