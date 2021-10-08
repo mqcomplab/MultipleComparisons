@@ -22,6 +22,7 @@ Matplotlib >= 1.0;  http://matplotlib.org/
 The folder "indices" contains the classes used to calculate and process the n-ary indices.
 The folder "post_processing" contains auxiliary functionality that can be used to process the results (generating files with the results of the
 comparisons, sum of ranking differences, preparation of input files for ANOVA analysis).
+The folder 'condensed_version' has a simpler (and more efficient) version of the implementation.
 
 # Reference
 Please, cite both the associated manuscripts:
