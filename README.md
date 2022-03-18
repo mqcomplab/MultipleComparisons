@@ -24,6 +24,9 @@ The folder "post_processing" contains auxiliary functionality that can be used t
 comparisons, sum of ranking differences, preparation of input files for ANOVA analysis).
 The folder 'condensed_version' has a simpler (and more efficient) version of the implementation.
 
+# Other Functionality
+1. ECS_MeDiv: linearly-scaling extended similarity-based diversity selection algorithm with binary similarity tie breaker criterion. 
+
 # Reference
 Please, cite both the associated manuscripts:
 
