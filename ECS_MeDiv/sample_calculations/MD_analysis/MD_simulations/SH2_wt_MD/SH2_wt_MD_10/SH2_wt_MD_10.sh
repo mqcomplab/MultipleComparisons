@@ -1,0 +1,1 @@
+"${SCHRODINGER}/utilities/multisim" -JOBNAME SH2_wt_MD_10 -HOST localhost -WAIT -maxjob 1 -cpu 1 -m SH2_wt_MD_10.msj -c SH2_wt_MD_10.cfg -description "Molecular Dynamics" SH2_wt_MD_10.cms -mode umbrella -set stage[1].set_family.md.jlaunch_opt=["-gpu"] -o SH2_wt_MD_10-out.cms -lic "DESMOND_GPGPU:16"

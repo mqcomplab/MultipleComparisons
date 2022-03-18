@@ -1,0 +1,155 @@
+Molecular Dynamics
+Job launching command:
+$SCHRODINGER/utilities/multisim -JOBNAME SH2_wt_MD_10 -HOST localhost -WAIT -maxjob 1 -cpu 1 -m SH2_wt_MD_10.msj -c SH2_wt_MD_10.cfg -description "Molecular Dynamics" SH2_wt_MD_10.cms -mode umbrella -set stage[1].set_family.md.jlaunch_opt=[-gpu] -o SH2_wt_MD_10-out.cms -lic DESMOND_GPGPU:16
+
+Multisim runs in the umbrella mode.
+Booting the multisim workflow engine...
+           multisim version: 3.8.5.19
+            mmshare version: 4.8
+                    Jobname: SH2_wt_MD_10
+                   Username: mihalovits
+            Master job host: compute-0-4
+                Subjob host: compute-0-4.local
+                     Job ID: compute-0-4-0-60d1c53e
+            multisim script: SH2_wt_MD_10.msj
+       Structure input file: SH2_wt_MD_10.cms
+            CPUs per subjob: "1"
+             Job start time: Tue Jun 22 13:10:57 2021
+           Launch directory: /home/guest101/Maestro/Desmond/MD_similarity/MD_simulations/SH2_wt_MD/SH2_wt_MD_10
+               $SCHRODINGER: /share/apps/schrodinger2019-4
+
+Parsing the multisim script file and the '-set' option...
+
+Summary of user stages:
+  stage 1 - task
+  stage 2 - simulate, Brownian Dynamics NVT, T = 10 K, small timesteps, and restraints on solute heavy atoms, 100ps
+  stage 3 - simulate, NVT, T = 10 K, small timesteps, and restraints on solute heavy atoms, 12ps
+  stage 4 - solvate_pocket
+  stage 5 - simulate, NVT and no restraints
+  stage 6 - simulate
+(6 stages in total)
+
+Workflow is started now.
+
+Stage 1 - task
+stage[1] task: Detecting system type...
+stage[1] task:   It seems a mature model system created for regular molecular dynamics simulations
+stage[1] task: Recognizing traits of system...
+stage[1] task:   (none)
+
+Stage 1 completed successfully.
+Stage 1 duration: 0h 0' 2"
+
+
+Stage 2 - simulate
+
+Launched Job("compute-0-4-0-60d1c54a"):
+  Launch time: 2021-06-22-13:11:06
+  Host       : compute-0-4.local
+  Jobname    : SH2_wt_MD_10_2
+  Stage      : 2 (simulate)
+
+Job("compute-0-4-0-60d1c54a") was successfully finished.
+  Host       : compute-0-4.local
+  Launch time: Tue Jun 22 13:11:06 2021
+  Start time : Tue Jun 22 13:11:06 2021
+  End time   : Tue Jun 22 13:12:14 2021
+  Duration   : 0h 1' 8"
+  CPUs       : 1
+  CPU time   : 0h 1' 8"
+  Exit code  : 0
+  Jobname    : SH2_wt_MD_10_2
+  Stage      : 2 (simulate)
+
+Stage 2 completed successfully.
+Stage 2 duration: 0h 1' 18"
+
+
+Stage 3 - simulate
+
+Launched Job("compute-0-4-0-60d1c599"):
+  Launch time: 2021-06-22-13:12:25
+  Host       : compute-0-4.local
+  Jobname    : SH2_wt_MD_10_3
+  Stage      : 3 (simulate)
+
+Job("compute-0-4-0-60d1c599") was successfully finished.
+  Host       : compute-0-4.local
+  Launch time: Tue Jun 22 13:12:25 2021
+  Start time : Tue Jun 22 13:12:25 2021
+  End time   : Tue Jun 22 13:13:01 2021
+  Duration   : 0h 0' 36"
+  CPUs       : 1
+  CPU time   : 0h 0' 36"
+  Exit code  : 0
+  Jobname    : SH2_wt_MD_10_3
+  Stage      : 3 (simulate)
+
+Stage 3 completed successfully.
+Stage 3 duration: 0h 0' 47"
+
+
+Stage 4 - solvate_pocket
+
+Stage 4 is skipped.
+
+
+Stage 5 - simulate
+
+Launched Job("compute-0-4-0-60d1c5c7"):
+  Launch time: 2021-06-22-13:13:11
+  Host       : compute-0-4.local
+  Jobname    : SH2_wt_MD_10_5
+  Stage      : 5 (simulate)
+
+Job("compute-0-4-0-60d1c5c7") was successfully finished.
+  Host       : compute-0-4.local
+  Launch time: Tue Jun 22 13:13:11 2021
+  Start time : Tue Jun 22 13:13:12 2021
+  End time   : Tue Jun 22 13:13:51 2021
+  Duration   : 0h 0' 39"
+  CPUs       : 1
+  CPU time   : 0h 0' 39"
+  Exit code  : 0
+  Jobname    : SH2_wt_MD_10_5
+  Stage      : 5 (simulate)
+
+Stage 5 completed successfully.
+Stage 5 duration: 0h 0' 49"
+
+
+Stage 6 - simulate
+
+Launched Job("compute-0-4-0-60d1c5f9"):
+  Launch time: 2021-06-22-13:14:01
+  Host       : compute-0-4.local
+  Jobname    : SH2_wt_MD_10
+  Stage      : 6 (simulate)
+
+Job("compute-0-4-0-60d1c5f9") was successfully finished.
+  Host       : compute-0-4.local
+  Launch time: Tue Jun 22 13:14:01 2021
+  Start time : Tue Jun 22 13:14:01 2021
+  End time   : Tue Jun 22 13:40:29 2021
+  Duration   : 0h 26' 28"
+  CPUs       : 1
+  CPU time   : 0h 26' 28"
+  Exit code  : 0
+  Jobname    : SH2_wt_MD_10
+  Stage      : 6 (simulate)
+
+Stage 6 completed successfully.
+Stage 6 duration: 0h 26' 35"
+
+Cleaning up files...
+
+Multisim summary (Tue Jun 22 13:40:30 2021):
+  Stage 1 completed.
+  Stage 2 completed.
+  Stage 3 completed.
+  Stage 4 was skipped.
+  Stage 5 completed.
+  Stage 6 completed.
+  Total duration: 0h 29' 33"
+  Total GPU time: 0h 28' 51" (used by 4 subjob(s))
+Multisim completed.

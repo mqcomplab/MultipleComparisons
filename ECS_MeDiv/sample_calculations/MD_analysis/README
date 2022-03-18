@@ -1,0 +1,5 @@
+The script Coordinate_extractor.sh is a linux shell script and can be run with linux. It also requires vmd to be installed.
+
+The script works if the MD trajectories are found in the folder MD_simulations inside subfolders as in the example. Feel free to change this, but do not forget to modify the script accordingly.
+
+Set the number of frames (line 11), system names (line 19), simulation lenghts (line 29) and the path to vmd.sh (line 44). The script will first run vmd to convert the Desmond created trajectories into mol2 file. After that, it will convert the mol2 files into table form (.dat) file, where columns represent the backbone atoms' x, y and z coordinates and the rows represent frames of the trajectory. This file can be used for seelction with the given python scripts. (be cautious, here the numbering of the frames starts with 1, but the frame numbers from the output of the python script starts with 0; e. g. if the first frame is selected, the python script will write out 0)

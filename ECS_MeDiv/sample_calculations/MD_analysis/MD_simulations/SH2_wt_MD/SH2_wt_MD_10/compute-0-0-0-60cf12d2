@@ -1,0 +1,55 @@
+filesize: 4061
+JobId: compute-0-0-0-60cf12d2
+Name: SH2_wt_MD_10
+Program: multisim
+Processors: 1
+OrigLaunchHost: compute-0-0.local
+OrigLaunchDir: /home/guest101/Maestro/Desmond/MD_similarity/MD_simulations/SH2_wt_MD/SH2_wt_MD_10
+Host: compute-0-0.local
+User: mihalovits
+Dir: /home/guest101/Maestro/Desmond/MD_similarity/MD_simulations/SH2_wt_MD/SH2_wt_MD_10
+HostsFile: /share/apps/schrodinger2019-4/schrodinger.hosts
+HostEntry: localhost
+Commandline: /share/apps/schrodinger2019-4/utilities/multisim -JOBNAME SH2_wt_MD_10 -HOST localhost -WAIT -maxjob 1 -cpu 1 -m SH2_wt_MD_10.msj -c SH2_wt_MD_10.cfg -description "Molecular Dynamics" SH2_wt_MD_10.cms -mode umbrella -set stage[1].set_family.md.jlaunch_opt=[-gpu] -o SH2_wt_MD_10-out.cms -lic DESMOND_GPGPU:16
+MmshareExec: /share/apps/schrodinger2019-4/mmshare-v4.8/bin/Linux-x86_64
+JobHost: compute-0-0.local
+JobUser: mihalovits
+JobDir: :tmpdir:
+TmpDir: /home/guest101/.schrodinger/tmp
+JobDB: /home/guest101/.schrodinger/.jobdb2
+JobMmshareExec: /share/apps/schrodinger2019-4/mmshare-v4.8/bin/Linux-x86_64
+JobPort: 48523
+JobPid: 13135
+Status: launched
+Summary: The job is being launched.
+Command: BASE64 KCAiJVNDSFJPRElOR0VSJS9ydW4iICJjaG9ydXNfbXVsdGlqb2IucHkiIC1pIFNIMl93dF9NRF8xMC5jbXMgLW0gU0gyX3d0X01EXzEwLm1zaiAtbyBTSDJfd3RfTURfMTAtb3V0LmNtcyAtam9ibmFtZSBTSDJfd3RfTURfMTAgLWNmZyBTSDJfd3RfTURfMTAuY2ZnIC1tYXhqb2IgMSAtbGF1bmNoX2RpciAiL2hvbWUvZ3Vlc3QxMDEvTWFlc3Ryby9EZXNtb25kL01EX3NpbWlsYXJpdHkvTURfc2ltdWxhdGlvbnMvU0gyX3d0X01EL1NIMl93dF9NRF8xMCIgLWNwdSAxIC1zZXQgInN0YWdlWzFdLnNldF9mYW1pbHkubWQuamxhdW5jaF9vcHQ9Wy1ncHVdIiAtZW5jb2RlZF9kZXNjcmlwdGlvbiAiVFc5c1pXTjFiR0Z5SUVSNWJtRnRhV056Q2twdllpQnNZWFZ1WTJocGJtY2dZMjl0YldGdVpEb0tKRk5EU0ZKUFJFbE9SMFZTTDNWMGFXeHBkR2xsY3k5dGRXeDBhWE5wYlNBdFNrOUNUa0ZOUlNCVFNESmZkM1JmVFVSZk1UQWdMVWhQVTFRZ2JHOWpZV3hvYjNOMElDMVhRVWxVSUMxdFlYaHFiMklnTVNBdFkzQjFJREVnTFcwZ1UwZ3lYM2QwWDAxRVh6RXdMbTF6YWlBdFl5QlRTREpmZDNSZlRVUmZNVEF1WTJabklDMWtaWE5qY21sd2RHbHZiaUFpVFc5c1pXTjFiR0Z5SUVSNWJtRnRhV056SWlCVFNESmZkM1JmVFVSZk1UQXVZMjF6SUMxdGIyUmxJSFZ0WW5KbGJHeGhJQzF6WlhRZ2MzUmhaMlZiTVYwdWMyVjBYMlpoYldsc2VTNXRaQzVxYkdGMWJtTm9YMjl3ZEQxYkxXZHdkVjBnTFc4Z1UwZ3lYM2QwWDAxRVh6RXdMVzkxZEM1amJYTWdMV3hwWXlCRVJWTk5UMDVFWDBkUVIxQlZPakUyQ2dwTmRXeDBhWE5wYlNCeWRXNXpJR2x1SUhSb1pTQjFiV0p5Wld4c1lTQnRiMlJsTGc9PSIgLXJlbGF5X2FyZyAiY2ZnID0gU0gyX3d0X01EXzEwLmNmZyBtYXhqb2IgPSAxIGNwdSA9IDEgbW9kZSA9IHVtYnJlbGxhIEhPU1QgPSBsb2NhbGhvc3QgSk9CTkFNRSA9IFNIMl93dF9NRF8xMCBUTVBESVIgPSAvc3RhdGUvcGFydGl0aW9uMS9ndWVzdDEwMS90bXAgIiAtRlJPTSBkZXNtb25kICkgPiAiU0gyX3d0X01EXzEwX211bHRpc2ltLmxvZyIgMj4mMQ==
+Home: /home/guest101
+Timezone: +0200
+LaunchTime: 2021-06-20-12:05:06
+StatusTime: 2021-06-20-12:05:06
+LogInterval: 60
+SaveJobDir: 0
+TmpLaunchDir: 0
+AutoCleanup: 0
+Debug: 0
+InputFiles[1]:	SH2_wt_MD_10.msj
+InputFiles[2]:	SH2_wt_MD_10.cms
+InputFiles[3]:	SH2_wt_MD_10.cfg
+LogFiles[1]:	SH2_wt_MD_10_multisim.log
+Licenses[1]:	DESMOND_GPGPU:16
+Envs[1]:	FLEXLM_TIMEOUT=3000000
+Envs[2]:	HOME_MMSHARE_EXEC=/share/apps/schrodinger2019-4/mmshare-v4.8/bin/Linux-x86_64
+Envs[3]:	MMSHARE_EXEC=/share/apps/schrodinger2019-4/mmshare-v4.8/bin/Linux-x86_64
+Envs[4]:	SCHRODINGER=/share/apps/schrodinger2019-4
+Envs[5]:	SCHRODINGER_APP_EXEC=MMSHARE_EXEC
+Envs[6]:	SCHRODINGER_COMMANDLINE="/share/apps/schrodinger2019-4/utilities/multisim -JOBNAME SH2_wt_MD_10 -HOST localhost -WAIT -maxjob 1 -cpu 1 -m SH2_wt_MD_10.msj -c SH2_wt_MD_10.cfg -description \"Molecular Dynamics\" SH2_wt_MD_10.cms -mode umbrella -set stage[1].set_family.md.jlaunch_opt=[-gpu] -o SH2_wt_MD_10-out.cms -lic DESMOND_GPGPU:16"
+Envs[7]:	SCHRODINGER_EXEC=/share/apps/schrodinger2019-4/internal/bin
+Envs[8]:	SCHRODINGER_FEATURE_FLAGS=0
+Envs[9]:	SCHRODINGER_JOBID=compute-0-0-0-60cf12d2
+Envs[10]:	SCHRODINGER_PERL_FEATURE_FLAGS_ENABLED=
+Envs[11]:	SCHRODINGER_PRODUCT=mmshare
+Envs[12]:	SCHRODINGER_TMPDIR=/state/partition1/guest101/tmp
+Envs[13]:	SCHRODINGER_TPP=
+Envs[14]:	SCHRODINGER_UMASK=2
+Envs[15]:	SCHROD_LICENSE_FILE=27008@licensz.chemres.hu
+Warnings[1]:	the declared tmpdir(s) - /state/partition1 is not writable /state/partition1 is not writable; using /home/guest101/.schrodinger/tmp

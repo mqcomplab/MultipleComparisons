@@ -1,0 +1,79 @@
+# Desmond standard NVT relaxation protocol
+# All times are in the unit of ps.
+# Energy is in the unit of kcal/mol.
+task {
+   task = "desmond:auto"
+   set_family = {
+      desmond = {
+         checkpt.write_last_step = no
+      }
+   }
+}
+
+simulate {
+   title       = "Brownian Dynamics NVT, T = 10 K, small timesteps, and restraints on solute heavy atoms, 100ps"
+   annealing   = off
+   time        = 100
+   timestep    = [0.001 0.001 0.003 ]
+   temperature = 10.0
+   ensemble = {
+      class = "NVT"
+      method = "Brownie"
+      brownie = {
+         delta_max = 0.1
+      }
+   }
+   restrain = {
+      atom = "solute_heavy_atom"
+      force_constant = 50.0
+   }
+}
+
+
+simulate {
+   effect_if   = [["==" "-gpu" "@*.*.jlaunch_opt[-1]"] 'ensemble.method = Langevin']
+   title       = "NVT, T = 10 K, small timesteps, and restraints on solute heavy atoms, 12ps"
+   annealing   = off
+   time        = 12
+   timestep    = [0.001 0.001 0.003]
+   temperature = 10.0
+   restrain    = { atom = solute_heavy_atom force_constant = 50.0 }
+   ensemble    = {
+      class  = NVT
+      method = Berendsen
+      thermostat.tau = 0.1
+   }
+
+   randomize_velocity.interval = 1.0
+   eneseq.interval             = 0.3
+   trajectory.center           = solute
+}
+
+solvate_pocket {
+   should_skip = true
+   ligand_file = ?
+}
+
+simulate {
+   title       = "NVT and no restraints"
+   time        = 24
+   effect_if   = [["@*.*.annealing"] 'annealing = off temperature = "@*.*.temperature[0][0]"'
+                  ["==" "-gpu" "@*.*.jlaunch_opt[-1]"] 'ensemble.method = Langevin']
+   ensemble    = {
+      class  = NVT
+      method = Berendsen
+      thermostat.tau = 0.1
+   }
+
+   eneseq.interval   = 0.3
+   trajectory.center = solute
+}
+simulate {
+   cfg_file = "SH2_wt_MD_10.cfg"
+   jobname  = "$MASTERJOBNAME"
+   dir      = "."
+   compress = ""
+}
+
+# Job launching command:
+# $SCHRODINGER/utilities/multisim -VIEWNAME desmond_molecular_dynamics_gui.MDApp -JOBNAME SH2_wt_MD_10 -HOST localhost -maxjob 1 -cpu 1 -m SH2_wt_MD_10.msj -c SH2_wt_MD_10.cfg -description "Molecular Dynamics" SH2_wt_MD_10.cms -mode umbrella -set stage[1].set_family.md.jlaunch_opt=[\"-gpu\"] -PROJ /home/mihalovits/Maestro/Maestro/JAK2.prj -DISP append -o SH2_wt_MD_10-out.cms -lic DESMOND_GPGPU:16
